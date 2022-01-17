@@ -8,7 +8,7 @@ import app.isolvetech.isolvenotes.dao.NoteDao
 import app.isolvetech.isolvenotes.model.Note
 
 @Database(entities = [Note::class], version = 1, exportSchema = false)
-abstract class NoteDatabase : RoomDatabase() {
+abstract class NoteDatabase: RoomDatabase() {
 
     companion object {
         @Volatile
@@ -21,31 +21,12 @@ abstract class NoteDatabase : RoomDatabase() {
             }
         }
 
-        fun createDataBase(context: Context) = Room.databaseBuilder(
-            context.applicationContext,
-            NoteDatabase::class.java,
-            "iSolveNote_database"
-        ).build()
-    }
+         private fun createDataBase(context: Context) = Room.databaseBuilder(
+                        context.applicationContext,
+                        NoteDatabase::class.java,
+                        "iSolveNote_database"
+                    ).build()
+            }
 
     abstract fun getNoteDao(): NoteDao
-    //abstract fun getNoteDao(): NoteDao
-
 }
-
-//private lateinit var INSTANCE: NoteDatabase
-//
-//fun dataBase(context: Context): NoteDatabase {
-//    synchronized(NoteDatabase::class.java) {
-//
-//        INSTANCE = Room.databaseBuilder(
-//            context.applicationContext,
-//            NoteDatabase::class.java,
-//            "iSolveNote_database"
-//        ).build()
-//    }
-//    return INSTANCE
-
-
-
-

@@ -3,20 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.27708333333333335" />
         <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/drawable/background_search.xml" value="0.39114583333333336" />
         <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/drawable/bg_add_button.xml" value="0.39114583333333336" />
         <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/drawable/bg_done_button.xml" value="0.39114583333333336" />
         <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/drawable/bg_subtitle_indicator.xml" value="0.39114583333333336" />
         <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/drawable/bottom_sheet_rounded.xml" value="0.39114583333333336" />
         <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/layout/activity_create_note.xml" value="0.375" />
-        <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/layout/activity_main.xml" value="0.20689655172413793" />
         <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/layout/bottom_sheet.xml" value="0.2638888888888889" />
-        <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/layout/fragment_about_us.xml" value="0.375" />
         <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/layout/fragment_edit.xml" value="0.2638888888888889" />
         <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/layout/fragment_note.xml" value="0.25" />
         <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/layout/note_item.xml" value="0.36205128205128206" />
-        <entry key="..\:/Users/User/ISolveNotes/app/src/main/res/menu/menu.xml" value="0.375" />
       </map>
     </option>
   </component>

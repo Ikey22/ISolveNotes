@@ -25,48 +25,46 @@
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/app_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_2sdp"
-                        android:layout_marginTop="@dimen/_15sdp"
-                        android:fontFamily="@font/google_sans_bold"
-                        android:text="@string/my_notes"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_30ssp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/linearLayoutCompat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_15sdp"
-                        android:layout_marginEnd="@dimen/_15sdp"
-                        android:layout_marginBottom="@dimen/_15sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/app_title">
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:id="@+id/app_title"
+                        android:fontFamily="@font/google_sans_bold"
+                        android:text="My Notes"
+                        android:textSize="@dimen/_30ssp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_2sdp"/>
 
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/app_title"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp">
 
                         <EditText
-                            android:id="@+id/search"
                             android:layout_width="0dp"
                             android:layout_height="@dimen/_50sdp"
-                            android:layout_weight="3"
+                            android:id="@+id/search"
                             android:background="@drawable/rounded_search"
                             android:drawableStart="@drawable/ic_round_search_24"
-                            android:hint="@string/search_here"
+                            android:padding="@dimen/_5sdp"
                             android:imeOptions="actionSearch"
+                            android:hint="@string/search_here"
+                            android:paddingStart="@dimen/_18sdp"
+                            android:paddingEnd="@dimen/_18sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:paddingBottom="@dimen/_5sdp"
+                            android:textSize="@dimen/_16ssp"
                             android:importantForAutofill="no"
                             android:inputType="textFilter"
-                            android:padding="@dimen/_5sdp"
-                            android:paddingStart="@dimen/_18sdp"
-                            android:paddingTop="@dimen/_4sdp"
-                            android:paddingEnd="@dimen/_18sdp"
-                            android:paddingBottom="@dimen/_5sdp"
-                            android:textSize="@dimen/_16ssp" />
+                            android:layout_weight="3"/>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 

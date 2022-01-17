@@ -5,16 +5,15 @@ import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.WindowManager
+import android.view.*
 import android.view.inputmethod.EditorInfo
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -40,6 +39,8 @@ import java.util.concurrent.TimeUnit
 class NoteFragment : Fragment(R.layout.fragment_note) {
     private lateinit var noteBinding: FragmentNoteBinding
     private lateinit var rvAdapter: NotesAdapter
+    private lateinit var navController: NavController
+
 
     private val viewModel: NoteViewModel by lazy {
         requireActivity().run {
@@ -60,12 +61,14 @@ class NoteFragment : Fragment(R.layout.fragment_note) {
         }
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         noteBinding = FragmentNoteBinding.bind(view)
         val activity = activity as MainActivity
-        val navController = Navigation.findNavController(view)
+        navController = Navigation.findNavController(view)
         requireView().hideKeyboard()
+        setHasOptionsMenu(true)
         CoroutineScope(Dispatchers.Main).launch {
             delay(10)
             //activity.window.statusBarColor = Color.WHITE

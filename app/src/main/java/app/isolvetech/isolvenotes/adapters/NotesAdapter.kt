@@ -3,6 +3,7 @@ package app.isolvetech.isolvenotes.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.FragmentNavigatorExtras
@@ -61,7 +62,7 @@ class NotesAdapter: ListAdapter<Note, NotesAdapter.NoteViewHolder>(DiffUtilCallb
                 date.text = note.date
                 parent.setCardBackgroundColor(note.color)
 
-                itemView.setOnClickListener {
+                parent.setOnClickListener {
                     val action=NoteFragmentDirections.actionNoteFragmentToEditFragment()
                         .setNote(note)
                     val extras= FragmentNavigatorExtras(parent to "recyclerview_${note.id}")
